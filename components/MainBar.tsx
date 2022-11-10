@@ -25,8 +25,8 @@ export default function MainBar(props: any) {
             <MenuIcon />
           </IconButton>
           <Box 
-            sx={{flexGrow: 1}} 
-            align="center" >
+            sx={{flexGrow: 1,
+            textAlign: 'center'}}>
             <Image alt="Weak Ass Mushroom Tea" width={500} height={39} src="/../public/images/wamt.png" />
           </Box>
           <Button color="inherit">Buy Now</Button>
