@@ -76,18 +76,11 @@ export default function MainContent(props: any) {
                     images.map( (item, i) => <Item key={i} item={item} /> )
                 }
             </Carousel>
-            <Grid container>
-                <Grid xs={6}>
-                    <Link href="https://www.instagram.com/weakassmushroomtea/" target="_blank" rel="noreferrer">
-                        <Avatar sx={{ bgcolor: 'grey', margin: 2 }}>
-                            <InstagramIcon />
-                        </Avatar>
-                    </Link>
-                </Grid>
-                <Grid xs={6} style={{textAlign: 'right'}}>
-                    <Typography style={{padding: 10}}>Scroll Down</Typography>
-                </Grid>
-            </Grid>
+            <Link href="https://www.instagram.com/weakassmushroomtea/" target="_blank" rel="noreferrer">
+                <Avatar sx={{ bgcolor: 'grey', margin: 2 }}>
+                    <InstagramIcon />
+                </Avatar>
+            </Link>
         </Box>
     )
 }
