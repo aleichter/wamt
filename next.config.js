@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  target: 'serverless', // add this line
 }
 
 module.exports = nextConfig
