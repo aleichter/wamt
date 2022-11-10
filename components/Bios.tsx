@@ -12,7 +12,7 @@ export default function Bios(props: any) {
             <Box sx={{flexGrow: 1}} align="center" >
                 <Grid container>
                     <Grid xs={12}>
-                        <Image alt="Meet The Band" width={254} height={35} src="/../public/images/meettheband.png" />
+                        <Image alt="Meet The Band" width={254} height={35} src="/../images/meettheband.png" />
                     </Grid>
                     <Grid
                         xs={6}>
