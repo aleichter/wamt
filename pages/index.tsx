@@ -4,6 +4,7 @@ import Bios from '../components/Bios';
 import Link from '@mui/material/Link';
 import MainContent from '../components/MainContent';
 import MainBar from '../components/MainBar';
+import Footer from '../components/Footer';
 import ScrollTop from '../components/ScrollTop';
 import { ThemeProvider } from '@mui/material/styles'
 import { themeOptions } from '../components/Theme';
@@ -25,8 +26,11 @@ export default function Home() {
             <Box style={{height:'70px'}}></Box>
             <MainContent/>
           </Grid>
-          <Grid xs={12} style={{height:'100vh'}}>
+          <Grid xs={12} >
               <Bios />
+          </Grid>
+          <Grid xs={12} style={{height:'15vh'}}>
+              <Footer />
               <ScrollTop >
                 <Fab size="small" aria-label="scroll back to top">
                   <KeyboardArrowUpIcon />
