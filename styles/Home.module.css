@@ -14,9 +14,13 @@
   }
 }
 
-.mainBackground {
+.mainBackground2 {
   background-image: url(../public/images/alexander-grey-p203ekCK4Ac-unsplash.jpg);
   background-position: 0px 0px;
   background-repeat: repeat-x;
   animation: animatedBackground 150s linear infinite alternate;
+}
+
+.mainBackground {
+  background-color: black;
 }

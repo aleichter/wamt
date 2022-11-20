@@ -9,26 +9,32 @@ import { ThemeProvider } from '@mui/material/styles'
 import { themeOptions } from '../components/Theme';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
+import Grid from '@mui/material/Grid';
 
 export default function Home() {
   return (
     <ThemeProvider theme={themeOptions}>
-       <Paper className={styles.mainBackground}>
-        <MainBar />
-        <Link id="back-to-top-anchor" />
-        <Box style={{height:'100vh'}}>
-          <MainContent />
-        </Box>
-        <Box style={{height:'100vh'}}>
-          <Bios />
-        </Box>
-        <ScrollTop >
-          <Fab size="small" aria-label="scroll back to top">
-            <KeyboardArrowUpIcon />
-          </Fab>
-        </ScrollTop>
-        </Paper>
+      <Paper className={styles.mainBackground}>
+        <Grid container>
+          <Grid xs={12}>
+            <MainBar />
+            <Link id="back-to-top-anchor" />
+          </Grid>
+          <Grid xs={12} style={{height:'fit-conent', minHeight:'100vh'}}>
+            <Box style={{height:'70px'}}></Box>
+            <MainContent/>
+          </Grid>
+          <Grid xs={12} style={{height:'100vh'}}>
+              <Bios />
+              <ScrollTop >
+                <Fab size="small" aria-label="scroll back to top">
+                  <KeyboardArrowUpIcon />
+                </Fab>
+              </ScrollTop>
+          </Grid>
+        </Grid>
+      </Paper>
     </ThemeProvider>
   )
 }
