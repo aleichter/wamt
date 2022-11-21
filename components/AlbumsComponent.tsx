@@ -1,10 +1,10 @@
 import Box from '@mui/material/Box';
 import { CardMedia, Typography, Card } from '@mui/material';
-
+import YoutubeEmbed from '../components/YouTubeEmbed';
 
 const config = {
         label: 'Our debut CD will be released on November 29th!',
-        imgPath: '/vol1.mp4',
+        imgPath: 'https://www.youtube.com/embed/RulWZhxGZfE',
         description: 'Set a reminder! Our debut CD will be released on November 29th! Available world wide on all major streaming platforms and for download on iTunes. Also a special VERY limited release of a collector\'s item CD will be available for purchase on our website',
         width: '80vw',
         height: '70vh',
@@ -21,25 +21,7 @@ export default function AlbumsComponent(props: any) {
             }}>
 
             <Card style={{width: config.width}}>
-                <CardMedia 
-                    component="video"
-                    controls 
-                    src={config.imgPath}
-                    sx={{
-                        margin: 'auto',
-                        backgroundImage: `url(${config.imgPath})`,
-                        backgroundPosition: 'center',
-                        backgroundSize:'contain',
-                        backgroundRepeat:'no-repeat',
-                        backgroundColor: 'rgba(20,20,20,20.75)',
-                        width: config.width,
-                        height: config.imgHeight,
-                        minWidth: config.minWidth,
-                        minHeight: config.minHeight,
-                    }}
-                >
-
-                </CardMedia>
+                <YoutubeEmbed embedId="RulWZhxGZfE" />
                 <Box >
                     <Typography sx={{
                         background:'rgba(20,20,20,20.75)',
