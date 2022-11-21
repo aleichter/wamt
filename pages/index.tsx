@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Bios from '../components/Bios';
 import Link from '@mui/material/Link';
-import MainContent from '../components/MainContent';
+import AlbumVol1Launch from '../components/AlbumVol1Launch';
 import MainBar from '../components/MainBar';
 import Footer from '../components/Footer';
 import ScrollTop from '../components/ScrollTop';
@@ -24,7 +24,7 @@ export default function Home() {
           </Grid>
           <Grid xs={12} style={{height:'fit-conent', minHeight:'100vh'}}>
             <Box style={{height:'70px'}}></Box>
-            <MainContent/>
+            <AlbumVol1Launch/>
           </Grid>
           <Grid xs={12} >
               <Bios />
