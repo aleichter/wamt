@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import { CardMedia, Typography, Card } from '@mui/material';
-import YoutubeEmbed from '../components/YouTubeEmbed';
+import YoutubeEmbed from './YouTubeEmbed';
 
 const config = {
         label: 'Our debut CD will be released on November 29th!',
