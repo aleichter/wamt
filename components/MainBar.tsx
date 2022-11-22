@@ -10,6 +10,7 @@ import Slide from '@mui/material/Slide';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Grid from '@mui/material/Grid';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import AppleIcon from '@mui/icons-material/Apple';
 import Avatar from '@mui/material/Avatar';
 import Link from '@mui/material/Link';
 import Drawer from '@mui/material/Drawer';
@@ -54,7 +55,9 @@ export default function MainBar(props: any) {
       return "/Albums"
     } else if (text === "Instagram") {
       return "https://www.instagram.com/weakassmushroomtea/"
-    } else {
+    } else if (text === "Apple") {
+      return "https://music.apple.com/us/album/weak-ass-mushroom-tea-vol-1/1653808035"
+    }  else {
       return "/"
     }
   }
@@ -79,6 +82,10 @@ export default function MainBar(props: any) {
     } else if (text === "Instagram") {
       return (
         <InstagramIcon />
+      )
+    } else if (text === "Apple") {
+      return (
+        <AppleIcon />
       )
     } else {
       return (
@@ -128,6 +135,11 @@ export default function MainBar(props: any) {
                           <InstagramIcon />
                       </Avatar>
                   </Link>
+                  <Link href="https://music.apple.com/us/album/weak-ass-mushroom-tea-vol-1/1653808035" target="_blank" rel="noreferrer">
+                      <Avatar sx={{ bgcolor: 'grey', marginTop: '10px', marginLeft:'5px' }}>
+                          <AppleIcon />
+                      </Avatar>
+                  </Link>
                 </Box>
                 <Box display="flex" justifyContent="flex-end" sx={{display: 'none'}}>
                   <Button color="inherit">Buy Now</Button>
@@ -164,7 +176,7 @@ export default function MainBar(props: any) {
           </List>
           <Divider />
           <List>
-            {['Contact Us', 'Instagram'].map((text, index) => (
+            {['Contact Us', 'Instagram', 'Apple'].map((text, index) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton href={selectHref(text)} target="_blank">
                   <ListItemIcon>
