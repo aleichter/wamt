@@ -39,3 +39,8 @@ a {
   width: 100%;
   position: absolute;
 }
+
+.paragraph {
+  padding-top: 10px;
+  font-size: 16pt
+}
