@@ -11,10 +11,23 @@ import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import styles from '../styles/Home.module.css';
 import Grid from '@mui/material/Grid';
-
+import Script from 'next/script';
 export default function Albums() {
     return (
         <ThemeProvider theme={themeOptions}>
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-CRQR7VLSF5"
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-CRQR7VLSF5');
+            `}
+          </Script>
           <Paper className={styles.mainBackground}>
             <Grid container>
               <Grid xs={12}>
