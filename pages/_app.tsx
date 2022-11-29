@@ -16,19 +16,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="weakassmushroomtea" content="Website for the band Weak Ass Mushroom Tea" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-CRQR7VLSF5"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){window.dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-CRQR7VLSF5');
-          `}
-        </Script>
       <Component {...pageProps} />
     </>
   )
