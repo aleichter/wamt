@@ -5,7 +5,7 @@ import { Typography } from '@mui/material';
 const config = {
         label: 'Our debut CD will be released on November 29th!',
         imgPath: '/images/album-vol1.png',
-        description: 'Set a reminder! Our debut CD will be released on November 29th! Available world wide on all major streaming platforms and for download on iTunes. Also a special VERY limited release of a collector\'s item CD will be available for purchase on our website',
+        description: 'Available Now! Our debut CD was released on November 29th! Available world wide on all major streaming platforms and for download on iTunes. Also a special VERY limited release of a collector\'s item CD will be available for purchase on our website',
         width: '80vw',
         height: '70vh',
         imgHeight: '60vh',

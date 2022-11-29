@@ -14,6 +14,8 @@ import AppleIcon from '@mui/icons-material/Apple';
 import Avatar from '@mui/material/Avatar';
 import Link from '@mui/material/Link';
 import Drawer from '@mui/material/Drawer';
+import { Icon } from '@iconify/react';
+
 import { 
   List, 
   ListItem, 
@@ -57,6 +59,14 @@ export default function MainBar(props: any) {
       return "https://www.instagram.com/weakassmushroomtea/"
     } else if (text === "Apple") {
       return "https://music.apple.com/us/album/weak-ass-mushroom-tea-vol-1/1653808035"
+    }  else if (text === "Spotify") {
+      return "https://open.spotify.com/artist/6Jf7qk2YxatzP8BJjnUaq3?si=0vk4GRLgRgKnDe32UJ_Gmg"
+    }  else if (text === "Pandora") {
+      return "https://pandora.app.link/kc1VPi0Mlvb"
+    }  else if (text === "YouTube") {
+      return "https://music.youtube.com/playlist?list=OLAK5uy_mr-o8aOwY3M-F7m28hOnDy1Iv4PiO3VPY&feature=share"
+    }  else if (text === "Amazon") {
+      return "https://music.amazon.com/artists/B0BLWG27BV?ref=dm_sh_ec0b-4afb-3ef9-dbd7-90307"
     }  else {
       return "/"
     }
@@ -86,6 +96,22 @@ export default function MainBar(props: any) {
     } else if (text === "Apple") {
       return (
         <AppleIcon />
+      )
+    } else if (text === "Spotify") {
+      return (
+        <Icon icon="mdi:spotify" />
+      )
+    } else if (text === "Pandora") {
+      return (
+        <Icon icon="mdi:pandora" />
+      )
+    } else if (text === "YouTube") {
+      return (
+        <Icon icon="mdi:youtube" />
+      )
+    } else if (text === "Amazon") {
+      return (
+        <Icon icon="arcticons:amazon-music" />
       )
     } else {
       return (
@@ -176,7 +202,7 @@ export default function MainBar(props: any) {
           </List>
           <Divider />
           <List>
-            {['Contact Us', 'Instagram', 'Apple'].map((text, index) => (
+            {['Contact Us', 'Instagram', 'Apple', 'Spotify', 'Pandora', 'YouTube', 'Amazon'].map((text, index) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton href={selectHref(text)} target="_blank">
                   <ListItemIcon>
