@@ -1,6 +1,35 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import Head from 'next/head';
+import Script from 'next/script';
+import { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  useEffect(() => {
+      TagManager.initialize({ gtmId: 'GTM-NBBVK8L' });
+  }, []);
+  return (
+    <>
+      <Head>
+        <title>Weak Ass Mushroom Tea</title>
+        <meta name="weakassmushroomtea" content="Website for the band Weak Ass Mushroom Tea" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CRQR7VLSF5"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-CRQR7VLSF5');
+          `}
+        </Script>
+      <Component {...pageProps} />
+    </>
+  )
 }
