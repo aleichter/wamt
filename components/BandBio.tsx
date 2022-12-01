@@ -76,7 +76,7 @@ export default function BandBio(props: any) {
                             Over the years, each member of the band has grown and matured musically. They each developed their own individual style which would be distinctive from the others, resulting in a dramatically diverse album featuring a wide rage of musical genres. 
                         </Typography>
                         <Typography className='paragraph'>
-                            With four song writers and four lead singers, Weak Ass Mushroom Tea Vol. 1 has elements of rock, punk, country, bluegrass, Americana, pop, and funk. 
+                            With four song writers and four lead singers, Weak Ass Mushroom Tea Vol. 1 has elements of rock, punk, country, bluegrass, Americana, alternative, and funk. 
                         </Typography>
                         <Typography className='paragraph'>
                             Released on November 29, 2022 Weak Ass Mushroom Tea Volume 1 is available streaming world wide on all major streaming platforms, while the guys are already hard at work writing and recording Volume 2. 
