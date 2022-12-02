@@ -67,7 +67,9 @@ export default function MainBar(props: any) {
       return "https://music.youtube.com/playlist?list=OLAK5uy_mr-o8aOwY3M-F7m28hOnDy1Iv4PiO3VPY&feature=share"
     }  else if (text === "Amazon") {
       return "https://music.amazon.com/artists/B0BLWG27BV?ref=dm_sh_ec0b-4afb-3ef9-dbd7-90307"
-    }  else {
+    }  else if (text === "Merch") {
+      return "https://www.amazon.com/s?k=Weak+Ass+Mushroom+Tea&i=fashion"
+    } else {
       return "/"
     }
   }
@@ -112,6 +114,10 @@ export default function MainBar(props: any) {
     } else if (text === "Amazon") {
       return (
         <Icon icon="arcticons:amazon-music" />
+      )
+    } else if (text === "Merch") {
+      return (
+        <Icon icon="uil:amazon" />
       )
     } else {
       return (
@@ -202,7 +208,20 @@ export default function MainBar(props: any) {
           </List>
           <Divider />
           <List>
-            {['Contact Us', 'Instagram', 'Apple', 'Spotify', 'Pandora', 'YouTube', 'Amazon'].map((text, index) => (
+            {['Contact Us', 'Instagram', 'Merch'].map((text, index) => (
+              <ListItem key={text} disablePadding>
+                <ListItemButton href={selectHref(text)} target="_blank">
+                  <ListItemIcon>
+                    {selectIcon(text)}
+                  </ListItemIcon>
+                  <ListItemText primary={text} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+          <Divider />
+          <List>
+            {['Apple', 'Spotify', 'Pandora', 'YouTube', 'Amazon'].map((text, index) => (
               <ListItem key={text} disablePadding>
                 <ListItemButton href={selectHref(text)} target="_blank">
                   <ListItemIcon>
